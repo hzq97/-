@@ -1,0 +1,39 @@
+<!--pages/header/header.wxml-->
+<view class="header">
+  <view class="left">
+    <image src="../../ss.png" lazy-load/>
+  </view>
+  <scroll-view class="item" scroll-x>
+    <view wx:for="{{title}}" data-key="{{item.key}}" data-type="{{item.type}}" bindtap='nav'>
+      <text catchtap='nav' data-key="{{item.key}}" data-type="{{item.type}}" class="{{active==item.key ? 'active' : ''}}">{{item.name}}</text>
+    </view>
+  </scroll-view>
+  <view class="right">
+    <view class="icon">
+      <image src="../../tj.png" lazy-load/>
+    </view>
+    <view class="icon">
+      <image src="../../yh.png" lazy-load/>
+    </view>
+  </view>
+</view>
+<swiper style="height:{{height}}px" current-item-id="{{active}}" data-type="{{typeID}}" bindchange="change" skip-hidden-item-layout="true">
+  <swiper-item wx:for="{{title}}" item-id="{{item.key}}">
+    <scroll-view class="scrollcon" scroll-y bindscrolltolower="scroll" style="height:{{height}}px;width:100%;">
+      <view wx:for="{{ item.type==typeID ? list : ''}}">
+        <navigator class="content" url="../content/content?key={{item.postid}}">
+          <view class="tc">
+            <view class="conlist">{{item.title}}</view>
+            <view class="ref">{{item.source}}</view>
+          </view>
+          <view wx:if="{{item.imgsrc}}" class="img">
+            <image src="{{item.imgsrc}}" lazy-load mode="widthFix" />
+          </view>
+        </navigator>
+        <view class="hr"></view>
+      </view>
+      <view style="text-align:center">加载中...</view>
+    </scroll-view>
+  </swiper-item>
+
+</swiper>

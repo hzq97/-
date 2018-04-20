@@ -1,0 +1,36 @@
+/* pages/content/content.wxss */
+@import "../../wxParse/wxParse.wxss";
+page{
+  font-family: 'PingFangSC','STHeiti','Microsoft YaHei','Helvetica','Arial',sans-serif;
+  padding:24rpx 28rpx;
+  box-sizing: border-box;
+}
+.title{
+  color:#000;
+  font-size: 44rpx;
+  line-height: 1.45;
+  font-weight: 600;
+   letter-spacing:6rpx; 
+}
+.soc{
+  display:flex;
+  flex-wrap:wrap;
+  margin:24rpx 0 32rpx 0;
+  line-height: 36rpx;
+}
+.source{
+  font-size: 28rpx;
+  color:#222121;
+  margin-right: 20rpx;
+}
+.time{
+  font-size: 24rpx;
+  color:#505050;
+}
+.content{
+  line-height: 50rpx;
+  letter-spacing:2rpx; 
+}
+.content image{
+  margin: 32rpx 0;
+}

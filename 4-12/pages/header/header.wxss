@@ -1,0 +1,91 @@
+/* pages/header/header.wxss */
+.header{
+  /* background: #ddd; */
+  height:90rpx;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+.header .left{
+  height:100%;
+  flex:1;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.header  image{
+  width: 38rpx;
+  height:38rpx;
+}
+.header .item{
+  flex: 5;
+  width:0rpx;
+  height:100%;
+  white-space:nowrap;
+  border-right:1px solid #ddd;
+}
+.header .item view{
+  width: 20%;
+  /* height: 85rpx; */
+  display: inline-block;
+  font-size:30rpx;
+}
+.header .item .active{
+  width: auto;
+  display: inline-block;
+  line-height: 85rpx;  
+  color: #d43d3d;
+  border-bottom:5rpx solid #d43d3d;
+}
+.header .right{
+  height:100%;
+  flex:2;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.header .icon{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.scrollcon{
+  padding-top:18rpx;
+  box-sizing: border-box;
+}
+.content{
+  display: flex;
+   padding: 30rpx; 
+   /* box-sizing: border-box;  */
+  padding-bottom: 38rpx
+}
+.tc{
+  flex:2;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+}
+.tc .conlist{
+  font-size: 34rpx;
+}
+.tc .ref{
+  font-size: 22rpx;
+}
+.img{
+  flex:1;
+   padding-left:10rpx;    
+  box-sizing: border-box;
+}
+.img image{
+  width: 100%;
+    box-sizing: border-box;  
+  
+}
+.hr{
+  /* width: 100%; */
+  height: 1px;
+  background: #ddd;
+   margin: 0 20rpx; 
+  box-sizing: border-box;
+}
